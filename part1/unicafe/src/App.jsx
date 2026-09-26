@@ -34,6 +34,24 @@ const Statistics = (props) => {
           <StatisticLine text="good" value={props.good} />
           <StatisticLine text="neutral" value={props.neutral} />
           <StatisticLine text="bad" value={props.bad} /> 
+          <tr>
+            <td>all</td>
+            <td>{props.good + props.neutral + props.bad}</td>
+          </tr>
+          <tr>
+            <td>everage</td>
+            <td>
+              {(props.good - props.bad) /
+              (props.good + props.neutral + props.bad)}
+            </td>
+          </tr>
+          <tr>
+          <td>positive</td>
+          <td>
+            {props.good /
+              (props.good + props.neutral + props.bad) * 100} %
+          </td>
+        </tr>
         </tbody>       
       </table>
     )
