@@ -4,6 +4,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+
 const App = () => {
   const anecdotes = [
     'If it hurts, do it more often.',
